@@ -78,7 +78,7 @@ border:none;
 
 <td colspan=2   align="right"  style="padding:10px;">
 
-<a href="#section1">About</a>
+<a href="#section1" id="aboutLink">About</a>
 <a href="#section2">Services</a>
 <a href="#section3">Contact</a>
 <a href="#" class="fa fa-facebook"></a>
@@ -225,23 +225,21 @@ Message:<br>
 
 </body>
 <script>
-  const logo = document.getElementById("logoImg");
+  const link = document.getElementById("aboutLink");
 
-  logo.onclick = function () {
-    logo.style.transform = "scale(1.1)";
-    logo.style.border = "3px solid #f00";
-    logo.style.boxShadow = "4px 4px 10px rgba(0,0,0,0.5)";
-    logo.style.transition = "all 0.3s";
-
-    // Reset after 0.4 sec
+  // Add click action
+  link.onclick = function () {
+    // Make it bigger
+    link.style.transform = "scale(1.2)";
+    
+    // After 300ms, back to normal
     setTimeout(function () {
-      logo.style.transform = "scale(1)";
-      logo.style.border = "none";
-      logo.style.boxShadow = "none";
-    }, 400);
+      link.style.transform = "scale(1)";
+    }, 300);
   };
 </script>
 </html>
+
 
 
 
