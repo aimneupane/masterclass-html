@@ -68,13 +68,29 @@ border:none;
 
 
 </style>
+<script>
+  const logo = document.getElementById("logoImg");
 
+  logo.onclick = function () {
+    logo.style.transform = "scale(1.1)";
+    logo.style.border = "3px solid #f00";
+    logo.style.boxShadow = "4px 4px 10px rgba(0,0,0,0.5)";
+    logo.style.transition = "all 0.3s";
+
+    // Reset after 0.4 sec
+    setTimeout(function () {
+      logo.style.transform = "scale(1)";
+      logo.style.border = "none";
+      logo.style.boxShadow = "none";
+    }, 400);
+  };
+</script>
 <body>
 
 <table  width="800px" align="center" cellspacing=0 style="border-collapse:collapse;height:auto;">
 <!first row -->
 <tr  height="50px"  bgcolor="#58744d">
-<td  style="padding-left:20px;"><img src="logo.PNG"></td>
+<td  style="padding-left:20px;"><img src="logo.PNG" id="logImg"></td>
 
 <td colspan=2   align="right"  style="padding:10px;">
 
@@ -225,4 +241,5 @@ Message:<br>
 
 </body>
 </html>
+
 
